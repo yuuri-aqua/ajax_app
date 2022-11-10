@@ -20,6 +20,7 @@ function post (){
     const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
     XHR.open("POST", "/posts", true);
+    XHR.responseType = "json";
     XHR.send(formData);
     XHR.onload = () => {
       if (XHR.status != 200) {
